@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scorpion Tech</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background-color: #222;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    nav ul li a:hover {
+      color: #ff5722;
+    }
+
+    .hero {
+      background-image: url('https://via.placeholder.com/1500x600');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 30%;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer p a {
+      color: #ff5722;
+      text-decoration: none;
+    }
+
+    footer p a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media(max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Scorpion Tech</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Innovative Tech Solutions for the Future</h2>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content" id="about">
+    <h3>About Us</h3>
+    <p>At Scorpion Tech, we provide cutting-edge technological solutions to businesses and individuals alike. Our services are tailored to meet your needs and enhance your productivity.</p>
+  </section>
+
+  <section class="content" id="services">
+    <h3>Our Services</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Web Development</h4>
+        <p>We create responsive, fast, and user-friendly websites to take your business online.</p>
+      </div>
+      <div class="card">
+        <h4>Mobile Apps</h4>
+        <p>Our team builds scalable and secure mobile applications for both Android and iOS platforms.</p>
+      </div>
+      <div class="card">
+        <h4>AI & Automation</h4>
+        <p>We integrate AI and automation to streamline your business processes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="content" id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: <a href="mailto:info@scorpiontech.com">info@scorpiontech.com</a></p>
+    <p>Phone: +1-234-567-890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Scorpion Tech | Built with <a href="#">Passion</a></p>
+  </footer>
+
+  <script>
+    // JavaScript for smooth scrolling when clicking navigation links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
